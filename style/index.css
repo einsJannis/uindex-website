@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    font-weight: normal;
+    src: url("/asset/font/JetBrainsMono-Regular.ttf");
+}
+
+body {
+    font-family: "JetBrains Mono";
+    background-image: url("/asset/img/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 5rem;
+    background: #00ffff;
+    background: linear-gradient(
+        160deg,
+        rgba(0, 255, 255, 1) 0%,
+        rgba(0, 0, 255, 1) 40%,
+        rgba(0, 0, 255, 1) 100%
+    );
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav h1 {
+    height: 100%;
+    vertical-align: middle;
+}
+
+nav h1 b {
+    color: white;
+    color: linear-gradient(160deg, rgba(255, 255, 255, 1) 0%, #bebeff 100%);
+}
+
+nav ul {
+    height: 100%;
+    display: flexbox;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+nav li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: black;
+}
+
+header {
+    height: 100vh;
+    align-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-family: sans-serif;
+}
+
+section {
+    background-color: white;
+    margin: 5rem 0;
+    padding: 5rem 10vw;
+}
+img {
+    width: 50%;
+}
+
+footer {
+    background-color: white;
+    margin: 5rem 0;
+    padding: 2rem 10vw;
+    text-align: center;
+}
+
+section#features > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+section#features > ul > li + li {
+    margin-top: -20vh;
+}
+
+section#features > ul > li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+section#features > ul > li:nth-child(odd) span {
+    grid-column: 1;
+    grid-row: 1;
+}
+section#features > ul > li:nth-child(odd) img {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+section#features > ul > li:nth-child(even) span {
+    grid-column: 2;
+    grid-row: 1;
+}
+section#features > ul > li:nth-child(even) img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+section#features > ul > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    max-height: 80vh;
+}
